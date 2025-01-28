@@ -1,0 +1,40 @@
+baseURL: '/'
+languageCode: 'en-us'
+title: 'claesto'
+theme: 'PaperModX'
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+publishDir: "docs"
+menu:
+  main:
+    - name: "Articles"
+      url: "/archives/"
+      weight: 10
+    - name: Tags
+      url: /tags/
+      weight: 20
+    - name: "About"
+      url: "/about/"
+      weight: 30
+    - name: "🔍"
+      url: "/search/"
+      weight: 40
+  
+params:
+  env: production
+  disableAnchoredHeadings: true
+  disableSpecial1stPost: true
+  EnableImageZoom: true
+  noComments: true
+  ShowCodeCopyButtons: true
+  ShowPostNavLinks: true
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowWordCount: false
+    
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON

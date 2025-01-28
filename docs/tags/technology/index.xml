@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Technology on claesto</title>
+    <link>/tags/technology/</link>
+    <description>Recent content in Technology on claesto</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 28 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/technology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python kanban card generator</title>
+      <link>/articles/python-kanban-card-generator/</link>
+      <pubDate>Tue, 28 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/python-kanban-card-generator/</guid>
+      <description>Streamline your pantry management with the Kanban Card Generator, a Python-based tool for creating customizable QR-enabled Kanban cards.</description>
+      <content:encoded><![CDATA[<p>Managing pantry inventory can be a daunting task, often leading to overstocking or running out of essential items. To address this challenge, I developed the <a href="https://github.com/claesto/kanban-card-generator">Kanban Card Generator</a>, a Python-powered tool designed to streamline pantry management by generating QR-enhanced Kanban cards.</p>
+<h2 id="project-overview">Project overview</h2>
+<p>Inspired by the Kanban system—a scheduling method widely used in just-in-time (JIT) manufacturing—I adapted its principles for personal pantry management. The core idea is to create visual cues that signal when it&rsquo;s time to replenish specific items, thereby maintaining optimal stock levels.</p>
+<p>The Kanban Card Generator produces business card-sized labels containing essential product information:</p>
+<ul>
+<li><strong>Product Type</strong>: The category or name of the item</li>
+<li><strong>Manufacturer</strong>: The brand or producer of the item</li>
+<li><strong>Store of Purchase</strong>: Where the item is typically bought</li>
+<li><strong>Kanban Levels</strong>: Indicators that help determine when to reorder</li>
+<li><strong>Reorder Quantity</strong>: The amount to purchase when restocking</li>
+</ul>
+<p>A prominent feature of each card is a QR code, generated using the <a href="https://pypi.org/project/segno/">Segno library</a>. This QR code integrates seamlessly with a custom macOS and iOS Shortcut, allowing for quick addition of items to a designated list, such as a grocery list.</p>
+<h2 id="key-features">Key features</h2>
+<ul>
+<li><strong>Python-Powered</strong>: Utilizes Python for efficient data processing and card generation.</li>
+<li><strong>QR Code Integration</strong>: Generates QR codes for swift item logging via mobile devices.</li>
+<li><strong>Customizable Templates</strong>: Allows for personalization of card design to suit individual preferences.</li>
+<li><strong>Cross-Platform Compatibility</strong>: Works seamlessly with macOS and iOS Shortcuts for enhanced usability.</li>
+</ul>
+<h2 id="getting-started">Getting started</h2>
+<p>To setup the Kanban Card Generator:</p>
+<ol start="0">
+<li>
+<p>Prerequisite: you have the macOS/iOS Shortcut &ldquo;<a href="https://www.icloud.com/shortcuts/609528f7b75b441bb34834c92f07b175">AddToList</a>&rdquo; installed.</p>
+</li>
+<li>
+<p><strong>Clone the Repository</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git clone https://github.com/claesto/kanban-card-generator.git
+</span></span><span style="display:flex;"><span>$ cd kanban-card-generator
+</span></span></code></pre></div></li>
+<li>
+<p>Activate the Python virtual environment:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ python -m venv venv
+</span></span><span style="display:flex;"><span>$ venv/bin/python venv/bin/activate
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Install Dependencies</strong>: Ensure you have Python installed, then install the required libraries:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ venv/bin/python -m pip install -r requirements.txt
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Configure Your Data</strong>: Customize the kanbancard.py script with your inventory details, including product names, manufacturers, stores, Kanban levels, and reorder quantities.</p>
+</li>
+<li>
+<p><strong>Generate Kanban Cards</strong>: Run the script to generate your personalized Kanban cards:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>venv/bin/python kanbancard.py
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Print and Use</strong>: Print the generated cards and attach them to your pantry items. Use the QR codes with the macOS and iOS Shortcut to manage your inventory efficiently.</p>
+</li>
+</ol>
+<p>If all went as expected, if you scan the QR code for a specific item, this item should be added to your <a href="https://www.icloud.com/reminders/">Reminders</a> list of choice.</p>
+<h2 id="future-enhancements">Future enhancements</h2>
+<p>Right now I&rsquo;m not really looking for specific enhancements. I don&rsquo;t have to manage a large inventory, this is after all to make managing our pantry/storage a bit easier. However feel free to iterate on the code, it&rsquo;s available under the <strong>Unlicense</strong> license.</p>
+<p>Some ideas:</p>
+<ul>
+<li><strong>Database integration</strong>: Implementing a database to manage larger inventories</li>
+<li><strong>Enhanced customization/templates</strong>: Offering more design options for the generated kanban cards</li>
+<li><strong>Mobile application</strong>: specifically tailored to inventory/stock management</li>
+</ul>
+<p>Contributions and feedback are welcome! Feel free to fork the repository, submit <a href="https://github.com/claesto/kanban-card-generator/pulls">pull requests</a>, or <a href="https://github.com/claesto/kanban-card-generator/issues">open issues</a> on GitHub.</p>
+<p>By leveraging this tool, you can transform your pantry management into a streamlined, efficient process, ensuring you always have the essentials on hand without overstocking.</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

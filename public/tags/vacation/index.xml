@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Vacation on claesto</title>
+    <link>//localhost:1313/tags/vacation/</link>
+    <description>Recent content in Vacation on claesto</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/vacation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Summer vacation Greece (Chalidiki)</title>
+      <link>//localhost:1313/photos/summer-vacation-greece-chaliki/</link>
+      <pubDate>Sun, 12 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/photos/summer-vacation-greece-chaliki/</guid>
+      <description>Photo report of our summer vacation in the Ardennen (Belgium)</description>
+      <content:encoded><![CDATA[<p>Last year our <em>only vacation</em> was a trip to the South of Belgium. We stayed in a loft cube, a (very) tiny house and a wood cabin in the woods.</p>
+<p>While we both enjoyed our stays and hikes during that time, we both felt the need for some intense sun this year. For a moment we shifted our attention to the North of Europe (by car): Norway or Sweden but for some unexplainable reason, our attention diverted to the Greece, again. Almost guaranteed warm/hot weather, the culture, food and for the first time: <strong>just the two of us</strong>.</p>
+<p>That&rsquo;s right: it will be our first trip out of Belgium <strong>without</strong> children. Our oldest son joined the military about a year ago and will be on a mission and our daughter is on a scouting camp.</p>
+<p>Only <em>issue</em> is that we still have a 19 year old cat roaming our house. Luckily we discovered the <a href="https://local">Pet au Pair</a> service. They&rsquo;ll visit our cat twice a day to give food, medication and of course a cuddle.</p>
+<p>With nothing holding us back, it was time to find a location. We knew we wanted to visit Greece, mainland or islands again, but we were not sure where to go. We both like food, we like the sea, but we also dislike mass tourism (overcrowded beaches or hotels, crying children everywhere, etc.) Such places are difficult to find during a summer vacation obviously.</p>
+<p>We discovered that there are specific Greek islands that don&rsquo;t suffer from mass tourism (yet) like Santorini, Kreta, etc. Such a place is Ithaka for instance, also part of the so called <strong>blue zones</strong> where people regularly have centennials in much larger numbers compared to other places. But a downside, purely based on Google Maps, is because of the lack of tourism, there&rsquo;s also a lack of (boutique) hotels &amp; restaurants.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Summer vacation Ardennen</title>
+      <link>//localhost:1313/photos/summer-vacation-ardennen/</link>
+      <pubDate>Tue, 13 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/photos/summer-vacation-ardennen/</guid>
+      <description>Photo report of our summer vacation in the Ardennen (Belgium)</description>
+      <content:encoded><![CDATA[<p>Some report.</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

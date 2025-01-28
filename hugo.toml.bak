@@ -1,0 +1,47 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'claesto'
+theme = 'PaperModX'
+
+enableInlineShortcodes = true
+enableRobotsTXT = true
+
+[menu]
+    [[menu.main]]
+        identifier = "articles"
+        name = "Articles"
+        url = "/articles/"
+        weight = 10
+    [[menu.main]]
+        identifier = "photos"
+        name = "Photos"
+        url = "/photos/"
+        weight = 20
+    [[menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about/"
+        weight = 30
+    [[menu.search]]
+        identifier = "Search"
+        name = "Search"
+        url = "/search/"
+        weight = 40
+
+[params]
+    disableAnchoredHeadings = true
+    EnableImageZoom = true
+    noComments = true
+    ShowCodeCopyButtons = true
+    ShowPostNavLinks = true
+    ShowReadingTime = true
+    ShowShareButtons = true
+    ShowWordCount = false
+    disableSpecial1stPost = true
+    disableScrollToTop = true
+    
+[outputs]
+  [home]
+    - HTML
+    - RSS
+    - JSON
