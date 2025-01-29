@@ -5,7 +5,9 @@ theme: 'PaperModX'
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
+enableEmoji: true
 publishDir: "docs"
+
 menu:
   main:
     - name: "Articles"
@@ -23,6 +25,9 @@ menu:
   
 params:
   env: production
+  author:
+    - Tom Claessens
+  description: "Explore a captivating mix of personal stories, thoughtful musings, and curious explorations. This blog dives into life’s unpredictable twists and turns—offering a little something for everyone. Join the journey and discover posts worth sticking around for."
   disableAnchoredHeadings: true
   disableSpecial1stPost: true
   EnableImageZoom: true

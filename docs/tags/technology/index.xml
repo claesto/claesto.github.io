@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Technology on claesto</title>
-    <link>/tags/technology/</link>
+    <link>//localhost:1313/tags/technology/</link>
     <description>Recent content in Technology on claesto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/technology/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/technology/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python kanban card generator</title>
-      <link>/articles/python-kanban-card-generator/</link>
+      <link>//localhost:1313/articles/python-kanban-card-generator/</link>
       <pubDate>Tue, 28 Jan 2025 00:00:00 +0000</pubDate>
       
-      <guid>/articles/python-kanban-card-generator/</guid>
+      <guid>//localhost:1313/articles/python-kanban-card-generator/</guid>
       <description>Streamline your pantry management with the Kanban Card Generator, a Python-based tool for creating customizable QR-enabled Kanban cards.</description>
       <content:encoded><![CDATA[<p>Managing pantry inventory can be a daunting task, often leading to overstocking or running out of essential items. To address this challenge, I developed the <a href="https://github.com/claesto/kanban-card-generator">Kanban Card Generator</a>, a Python-powered tool designed to streamline pantry management by generating QR-enhanced Kanban cards.</p>
 <h2 id="project-overview">Project overview</h2>
