@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Home Automation on claesto</title>
+    <link>//localhost:1313/tags/home-automation/</link>
+    <description>Recent content in Home Automation on claesto</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/home-automation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ratgdo: smart garage door control</title>
+      <link>//localhost:1313/articles/ratgdo-garage-door-automation/</link>
+      <pubDate>Sat, 01 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/articles/ratgdo-garage-door-automation/</guid>
+      <description>Integrate the ratgdo device with your Home Assistant setup for smart garage door control. Step-by-step instructions, compatibility with LiftMaster openers.</description>
+      <content:encoded><![CDATA[<p>If you&rsquo;re looking to upgrade your garage door with smart automation, the ratgdo device offers a reliable and efficient solution. When integrated with Home Assistant, it allows you to control your garage door seamlessly from your smartphone, set up automation and monitor the door&rsquo;s status. I&rsquo;ll walk you through the steps I had to take to integrate ratgdo with Home Assistant and provide some tips for a smooth installation.</p>
+<h2 id="why-choose-ratgdo-for-garage-door-automation">Why choose ratgdo for garage door automation?</h2>
+<p>The ratgdo device is a versatile and compact solution designed specifically for garage door automation. It supports various garage door models, including the popular LiftMaster series, and integrates easily with Home Assistant. Key features include:</p>
+<ul>
+<li><strong>Wireless Connectivity</strong>: Supports Wi-Fi for easy integration.</li>
+<li><strong>Home Assistant Compatibility</strong>: Native or custom MQTT-based integration.</li>
+<li><strong>Status Monitoring</strong>: Ability to track the open or closed state of your garage door.</li>
+<li><strong>Easy Installation</strong>: Compact design that fits into most garage door setups.</li>
+</ul>
+<p><img loading="lazy" src="/articles/ratgdo-garage-door-automation/images/_DSF2092_Large.jpg" type="" alt="Apple AirPods Max on Ethnicraft Bok oak table"  /></p>
+<h2 id="installation--setup">Installation &amp; setup</h2>
+<h3 id="step-1-gather-your-components">Step 1: Gather Your Components</h3>
+<ul>
+<li>Before starting the installation, make sure you have the following components:</li>
+<li>ratgdo device</li>
+<li>Power adapter and necessary wiring for the device</li>
+<li>Reed sensor (optional but recommended for status monitoring)</li>
+<li>LiftMaster 700 garage door opener or any compatible model</li>
+<li>Home Assistant instance running on your network</li>
+</ul>
+<h3 id="step-2-install-the-ratgdo-device">Step 2: Install the ratgdo Device</h3>
+<ol>
+<li><strong>Turn off power</strong>: Before wiring, ensure that your garage door opener is powered off to avoid any electrical hazards.</li>
+<li><strong>Connect wiring</strong>: Attach the ratgdo device to the garage door opener’s control terminals. Refer to the ratgdo documentation for specific wiring - instructions.</li>
+<li><strong>Install the reed sensor (optional)</strong>: Mount the reed sensor on the garage door frame and align it with the magnet on the door to detect open/closed states.</li>
+<li><strong>Power up</strong>: Connect the power adapter and turn the garage door opener back on.</li>
+</ol>
+<h3 id="step-3-configure-ratgdo-with-home-assistant">Step 3: Configure ratgdo with Home Assistant</h3>
+<ol>
+<li><strong>Access Home Assistant</strong>: Open the Home Assistant dashboard.</li>
+<li><strong>Add ratgdo Integration</strong>: Navigate to Settings &gt; Devices &amp; Services and search for ratgdo. If there is no native integration, set up MQTT manually:
+<ul>
+<li>Enable MQTT in Home Assistant.</li>
+</ul>
+</li>
+<li><strong>Configure ratgdo</strong>:
+<ul>
+<li>set the broker address</li>
+<li>set the username &amp; password</li>
+<li>set a topic prefix e.g. <code>ratgdo/garage</code></li>
+<li>save &amp; reboot the ratgdo</li>
+</ul>
+</li>
+<li><strong>Test the connection</strong>: Ensure that Home Assistant can send commands to open and close the garage door and receive status updates from the reed sensor.
+<ul>
+<li>go to settings &gt; Devices &amp; Services &gt; MQTT</li>
+<li>use the <strong>listen to a topic</strong> and enter the topic <code>ratgdo/garage</code> to see messages</li>
+</ul>
+</li>
+</ol>
+<h3 id="step-4-add-the-cover-in-home-assistant">Step 4: Add the cover in Home Assistant</h3>
+<p>Add the following to your configuration:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">cover</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">platform</span>: <span style="color:#ae81ff">mqtt</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Garage Door&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">command_topic</span>: <span style="color:#e6db74">&#34;ratgdo/garage/command&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">state_topic</span>: <span style="color:#e6db74">&#34;ratgdo/garage/state&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">payload_open</span>: <span style="color:#e6db74">&#34;OPEN&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">payload_close</span>: <span style="color:#e6db74">&#34;CLOSE&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">state_open</span>: <span style="color:#e6db74">&#34;open&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">state_closed</span>: <span style="color:#e6db74">&#34;closed&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">device_class</span>: <span style="color:#ae81ff">garage</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">optimistic</span>: <span style="color:#66d9ef">false</span>
+</span></span></code></pre></div><p>Reload MQTT or <strong>restart</strong> Home Assistant for the changes to load.</p>
+<h3 id="step-5-create-automations">Step 5: Create Automations</h3>
+<p>Once the ratgdo device is integrated, you can create automations for a smarter garage experience. Here are some ideas:</p>
+<ul>
+<li><strong>Geofencing Automation</strong>: Automatically open the garage door when you arrive home by using location-based triggers.</li>
+<li><strong>Scheduled Closure</strong>: Ensure the garage door closes automatically at a specific time each night.</li>
+<li><strong>Voice Control</strong>: Integrate with Alexa or Google Assistant for hands-free operation.</li>
+<li><strong>Notifications</strong>: Receive alerts if the garage door is left open for an extended period.</li>
+</ul>
+<h3 id="step-6-test-and-validate">Step 6: Test and Validate</h3>
+<p>After setting up the integration and automations, thoroughly test the system to ensure stability and reliability:</p>
+<ul>
+<li>Verify that the garage door responds to commands from Home Assistant.</li>
+<li>Check that the reed sensor accurately reports the door&rsquo;s status.</li>
+<li>Simulate various scenarios to test automations and notifications.</li>
+</ul>
+<h3 id="troubleshooting-tips">Troubleshooting Tips</h3>
+<ul>
+<li><strong>Connection Issues</strong>: Ensure the ratgdo device is connected to a stable Wi-Fi network.</li>
+<li><strong>MQTT Configuration</strong>: Double-check MQTT topic settings if commands are not working.</li>
+<li><strong>Sensor Calibration</strong>: If the reed sensor is not detecting the door&rsquo;s status correctly, adjust its position.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>Integrating the ratgdo device with Home Assistant is a game-changer for smart garage door control. With a few simple steps, you can enhance your home automation setup and enjoy the convenience of remote garage door management. Whether you&rsquo;re automating door operations or setting up custom alerts, this solution offers flexibility and peace of mind.</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
