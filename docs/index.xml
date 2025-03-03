@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>claesto</title>
-    <link>/</link>
+    <link>//localhost:1313/</link>
     <description>Recent content on claesto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Keeping LXC containers with docker containers up-to-date</title>
-      <link>/articles/keeping-lxc-containers-and-docker-containers-up-to-date/</link>
-      <pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate>
+      <link>//localhost:1313/articles/keeping-lxc-containers-and-docker-containers-up-to-date/</link>
+      <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
       
-      <guid>/articles/keeping-lxc-containers-and-docker-containers-up-to-date/</guid>
+      <guid>//localhost:1313/articles/keeping-lxc-containers-and-docker-containers-up-to-date/</guid>
       <description>How to automatically update Ubuntu LXC containers with unattended-upgrades and keep Docker containers up-to-date using Watchtower for better security</description>
       <content:encoded><![CDATA[<p>When running Ubuntu inside an LXC container, it&rsquo;s important to keep the system up-to-date with security patches and updates. Additionally, if you are running Docker containers inside your LXC environment, those need regular updates as well. This guide covers automating updates using <code>unattended-upgrades</code> for the LXC container and <code>watchtower</code> for Docker containers.</p>
 <h2 id="1-keeping-ubuntu-updated-with-unattended-upgrades">1. Keeping Ubuntu Updated with Unattended-Upgrades</h2>
@@ -68,10 +68,10 @@
     
     <item>
       <title>Python kanban card generator</title>
-      <link>/articles/python-kanban-card-generator/</link>
+      <link>//localhost:1313/articles/python-kanban-card-generator/</link>
       <pubDate>Tue, 28 Jan 2025 00:00:00 +0000</pubDate>
       
-      <guid>/articles/python-kanban-card-generator/</guid>
+      <guid>//localhost:1313/articles/python-kanban-card-generator/</guid>
       <description>Streamline your pantry management with the Kanban Card Generator, a Python-based tool for creating customizable QR-enabled Kanban cards.</description>
       <content:encoded><![CDATA[<p>Managing pantry inventory can be a daunting task, often leading to overstocking or running out of essential items. To address this challenge, I developed the <a href="https://github.com/claesto/kanban-card-generator">Kanban Card Generator</a>, a Python-powered tool designed to streamline pantry management by generating QR-enhanced Kanban cards.</p>
 <h2 id="project-overview">Project overview</h2>

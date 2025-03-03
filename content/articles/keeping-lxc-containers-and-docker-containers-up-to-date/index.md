@@ -1,7 +1,7 @@
 +++
 author = "Tom Claessens"
 title = "Keeping LXC containers with docker containers up-to-date"
-date = "2025-02-28"
+date = "2025-02-26"
 description = "How to automatically update Ubuntu LXC containers with unattended-upgrades and keep Docker containers up-to-date using Watchtower for better security"
 tags = ["technology"]
 showtoc = false
