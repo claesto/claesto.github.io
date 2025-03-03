@@ -6,7 +6,7 @@ theme: 'PaperModX'
 enableInlineShortcodes: true
 enableRobotsTXT: true
 enableEmoji: true
-publishDir: "docs"
+#publishDir: "docs"
 
 menu:
   main:
