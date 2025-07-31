@@ -3,18 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2025-01-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-07-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/articles/</loc>
-    <lastmod>2025-01-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-07-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/articles/python-kanban-card-generator/</loc>
-    <lastmod>2025-01-28T00:00:00+00:00</lastmod>
+    <loc>/articles/echoes-of-silence/</loc>
+    <lastmod>2025-07-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2025-01-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-07-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/technology/</loc>
+    <lastmod>2025-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/articles/keeping-lxc-containers-and-docker-containers-up-to-date/</loc>
+    <lastmod>2025-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/articles/python-kanban-card-generator/</loc>
     <lastmod>2025-01-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/search/</loc>

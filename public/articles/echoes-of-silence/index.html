@@ -1,20 +1,555 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Technology on claesto</title>
-    <link>/tags/technology/</link>
-    <description>Recent content in Technology on claesto</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 31 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/technology/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Echoes of silence: The Secret World of Number Stations and Dead Hand Systems</title>
-      <link>/articles/echoes-of-silence/</link>
-      <pubDate>Thu, 31 Jul 2025 00:00:00 +0000</pubDate>
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Echoes of silence: The Secret World of Number Stations and Dead Hand Systems | claesto</title>
+<meta name="keywords" content="technology">
+<meta name="description" content="Explore the Cold War mystery of number stations, fail-deadly systems, and how to simulate them today using modern tech like Raspberry Pi and Rust.">
+<meta name="author" content="Tom Claessens">
+<link rel="canonical" href="/articles/echoes-of-silence/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.a666f9d687ac29bccdb079cca58e6f35990c449f83b88636b32dc8a3eef90b3e.css" integrity="sha256-pmb51oesKbzNsHnMpY5vNZkMRJ&#43;DuIY2sy3Io&#43;75Cz4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" hreflang="en" href="/articles/echoes-of-silence/">
+
+  <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Echoes of silence: The Secret World of Number Stations and Dead Hand Systems | claesto" />
+<meta name="twitter:description" content="Explore the Cold War mystery of number stations, fail-deadly systems, and how to simulate them today using modern tech like Raspberry Pi and Rust." />
+<meta property="og:title" content="Echoes of silence: The Secret World of Number Stations and Dead Hand Systems | claesto" />
+<meta property="og:description" content="Explore the Cold War mystery of number stations, fail-deadly systems, and how to simulate them today using modern tech like Raspberry Pi and Rust." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/articles/echoes-of-silence/" />
+    <meta property="og:image" content="/articles/echoes-of-silence/number_stations.png" /><meta property="article:section" content="articles" />
+  <meta property="article:published_time" content="2025-07-31T00:00:00&#43;00:00" />
+  <meta property="article:modified_time" content="2025-07-31T00:00:00&#43;00:00" />
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "/articles/"
+    }
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Echoes of silence: The Secret World of Number Stations and Dead Hand Systems",
+      "item": "/articles/echoes-of-silence/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Echoes of silence: The Secret World of Number Stations and Dead Hand Systems | claesto",
+  "name": "Echoes of silence: The Secret World of Number Stations and Dead Hand Systems",
+  "description": "Explore the Cold War mystery of number stations, fail-deadly systems, and how to simulate them today using modern tech like Raspberry Pi and Rust.",
+  "keywords": [
+    "technology"
+  ],
+  "wordCount" : "7027",
+  "inLanguage": "en",
+  "image":"/articles/echoes-of-silence/number_stations.png","datePublished": "2025-07-31T00:00:00Z",
+  "dateModified": "2025-07-31T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Tom Claessens"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/articles/echoes-of-silence/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "claesto",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/favicon.ico"
+    }
+  }
+}
+</script>
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary-bg: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list-page {
+                background: var(--theme);
+            }
+
+            .list-page:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list-page:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+
+</head>
+
+<body class=" type-articles kind-page layout-" id="top"><script data-no-instant>
+function switchTheme(theme) {
+  switch (theme) {
+    case 'light':
+      document.body.classList.remove('dark');
+      break;
+    case 'dark':
+      document.body.classList.add('dark');
+      break;
+    
+    default:
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+      }
+  }
+}
+
+function isDarkTheme() {
+  return document.body.className.includes("dark");
+}
+
+function getPrefTheme() {
+  return localStorage.getItem("pref-theme");
+}
+
+function setPrefTheme(theme) {
+  switchTheme(theme)
+  localStorage.setItem("pref-theme", theme);
+}
+
+const toggleThemeCallbacks = {}
+toggleThemeCallbacks['main'] = (isDark) => {
+  
+  if (isDark) {
+    setPrefTheme('light');
+  } else {
+    setPrefTheme('dark');
+  }
+}
+
+
+
+
+window.addEventListener('toggle-theme', function() {
+  
+  const isDark = isDarkTheme()
+  for (const key in toggleThemeCallbacks) {
+    toggleThemeCallbacks[key](isDark)
+  }
+});
+
+
+function toggleThemeListener() {
+  
+  window.dispatchEvent(new CustomEvent('toggle-theme'));
+}
+
+</script>
+<script>
+  
+  (function() {
+    const defaultTheme = 'light';
+    const prefTheme = getPrefTheme();
+    const theme = prefTheme ? prefTheme : defaultTheme;
+
+    switchTheme(theme);
+  })();
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="/" accesskey="h" title="claesto (Alt + H)">claesto</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="/archives/" title="Articles"
+                >Articles
+                </a>
+            </li>
+            <li>
+                <a href="/tags/" title="Tags"
+                >Tags
+                </a>
+            </li>
+            <li>
+                <a href="/about/" title="About"
+                >About
+                </a>
+            </li>
+            <li>
+                <a href="/search/" title="🔍"
+                >🔍
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main post">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Echoes of silence: The Secret World of Number Stations and Dead Hand Systems</h1>
+    <div class="post-description">Explore the Cold War mystery of number stations, fail-deadly systems, and how to simulate them today using modern tech like Raspberry Pi and Rust.</div>
+    <div class="post-meta"><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar" style="user-select: text;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" style="user-select: text;"></rect><line x1="16" y1="2" x2="16" y2="6" style="user-select: text;"></line><line x1="8" y1="2" x2="8" y2="6" style="user-select: text;"></line><line x1="3" y1="10" x2="21" y2="10" style="user-select: text;"></line></svg>
+  <span>July 31, 2025</span></span><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon" style="user-select: text;"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" style="user-select: text;"></path><line x1="7" y1="7" x2="7" y2="7" style="user-select: text;"></line></svg>
+  <span class="post-tags"><a href="/tags/technology/">Technology</a></span></span><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 15"></polyline></svg>
+  <span>33 min</span></span>
+
       
-      <guid>/articles/echoes-of-silence/</guid>
-      <description>Explore the Cold War mystery of number stations, fail-deadly systems, and how to simulate them today using modern tech like Raspberry Pi and Rust.</description>
-      <content:encoded><![CDATA[<h2 id="whispered-codes-from-the-cold-war">Whispered Codes from the Cold War</h2>
+      
+    </div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="lazy" srcset="/articles/echoes-of-silence/number_stations_hu_dd64248e11a18e5a.png 360w ,/articles/echoes-of-silence/number_stations_hu_a09e4fa45186b995.png 480w ,/articles/echoes-of-silence/number_stations_hu_72ad849071ef4b09.png 720w ,/articles/echoes-of-silence/number_stations.png 1024w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="/articles/echoes-of-silence/number_stations.png" alt="" 
+            width="1024" height="1024">
+        
+</figure><div class="toc side right">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#whispered-codes-from-the-cold-war" aria-label="Whispered Codes from the Cold War">Whispered Codes from the Cold War</a></li>
+                <li>
+                    <a href="#number-stations--the-cold-wars-radio-ghosts" aria-label="Number Stations — The Cold War’s Radio Ghosts">Number Stations — The Cold War’s Radio Ghosts</a><ul>
+                        
+                <li>
+                    <a href="#the-mystery-of-the-numbers" aria-label="The Mystery of the Numbers">The Mystery of the Numbers</a></li>
+                <li>
+                    <a href="#historical-context" aria-label="Historical Context">Historical Context</a></li>
+                <li>
+                    <a href="#the-buzzer-stations" aria-label="The Buzzer Stations">The Buzzer Stations</a></li></ul>
+                </li>
+                <li>
+                    <a href="#the-dead-hand--fail-deadly-systems-in-the-nuclear-age" aria-label="The Dead Hand — Fail-Deadly Systems in the Nuclear Age">The Dead Hand — Fail-Deadly Systems in the Nuclear Age</a><ul>
+                        
+                <li>
+                    <a href="#the-specter-of-mutual-assured-destruction" aria-label="The Specter of Mutual Assured Destruction">The Specter of Mutual Assured Destruction</a></li>
+                <li>
+                    <a href="#enter-the-dead-hand" aria-label="Enter the Dead Hand">Enter the Dead Hand</a></li>
+                <li>
+                    <a href="#architecture-of-the-dead-hand-system" aria-label="Architecture of the Dead Hand System">Architecture of the Dead Hand System</a></li>
+                <li>
+                    <a href="#the-sensors--eyes-and-ears-of-the-system" aria-label="The Sensors — Eyes and Ears of the System">The Sensors — Eyes and Ears of the System</a></li>
+                <li>
+                    <a href="#logic-and-fail-safe-mechanisms" aria-label="Logic and Fail-Safe Mechanisms">Logic and Fail-Safe Mechanisms</a></li>
+                <li>
+                    <a href="#the-faraday-cage--shielding-the-machine" aria-label="The Faraday Cage — Shielding the Machine">The Faraday Cage — Shielding the Machine</a></li>
+                <li>
+                    <a href="#the-chilling-legacy-of-perimeter" aria-label="The Chilling Legacy of Perimeter">The Chilling Legacy of Perimeter</a></li>
+                <li>
+                    <a href="#modern-speculations-the-role-of-number-stations-and-buzzers" aria-label="Modern Speculations: The Role of Number Stations and Buzzers">Modern Speculations: The Role of Number Stations and Buzzers</a></li></ul>
+                </li>
+                <li>
+                    <a href="#inside-the-sensors--the-technical-heartbeat-of-a-dead-hand-system" aria-label="Inside the Sensors — The Technical Heartbeat of a Dead Hand System">Inside the Sensors — The Technical Heartbeat of a Dead Hand System</a><ul>
+                        
+                <li>
+                    <a href="#the-sensor-network-the-systems-nervous-system" aria-label="The Sensor Network: The System’s Nervous System">The Sensor Network: The System’s Nervous System</a></li>
+                <li>
+                    <a href="#seismic-sensors-detecting-the-earths-tremors" aria-label="Seismic Sensors: Detecting the Earth’s Tremors">Seismic Sensors: Detecting the Earth’s Tremors</a></li>
+                <li>
+                    <a href="#radiation-detectors-sensing-the-invisible-fallout" aria-label="Radiation Detectors: Sensing the Invisible Fallout">Radiation Detectors: Sensing the Invisible Fallout</a></li>
+                <li>
+                    <a href="#motion-and-pressure-sensors-detecting-shockwaves-and-structural-impact" aria-label="Motion and Pressure Sensors: Detecting Shockwaves and Structural Impact">Motion and Pressure Sensors: Detecting Shockwaves and Structural Impact</a></li>
+                <li>
+                    <a href="#data-fusion-combining-sensor-inputs" aria-label="Data Fusion: Combining Sensor Inputs">Data Fusion: Combining Sensor Inputs</a></li>
+                <li>
+                    <a href="#high-level-pseudo-code-sensor-monitoring-and-attack-detection" aria-label="High-Level Pseudo Code: Sensor Monitoring and Attack Detection">High-Level Pseudo Code: Sensor Monitoring and Attack Detection</a></li>
+                <li>
+                    <a href="#faraday-cage-protecting-against-electromagnetic-interference" aria-label="Faraday Cage: Protecting Against Electromagnetic Interference">Faraday Cage: Protecting Against Electromagnetic Interference</a></li>
+                <li>
+                    <a href="#building-such-a-system-in-the-cold-war-era" aria-label="Building Such a System in the Cold War Era">Building Such a System in the Cold War Era</a></li>
+                <li>
+                    <a href="#modern-sensor-simulation-with-rust--raspberry-pi" aria-label="Modern Sensor Simulation with Rust &amp; Raspberry Pi">Modern Sensor Simulation with Rust &amp; Raspberry Pi</a></li>
+                <li>
+                    <a href="#example-rust-snippet-reading-a-motion-sensor-on-raspberry-pi" aria-label="Example Rust Snippet Reading a Motion Sensor on Raspberry Pi">Example Rust Snippet Reading a Motion Sensor on Raspberry Pi</a></li></ul>
+                </li>
+                <li>
+                    <a href="#the-logic-and-architecture-of-fail-deadly-systems--control-communication-and-automation" aria-label="The Logic and Architecture of Fail-Deadly Systems — Control, Communication, and Automation">The Logic and Architecture of Fail-Deadly Systems — Control, Communication, and Automation</a><ul>
+                        
+                <li>
+                    <a href="#the-challenge-making-decisions-without-humans" aria-label="The Challenge: Making Decisions Without Humans">The Challenge: Making Decisions Without Humans</a></li>
+                <li>
+                    <a href="#system-architecture-overview" aria-label="System Architecture Overview">System Architecture Overview</a></li>
+                <li>
+                    <a href="#control-flow-from-detection-to-action" aria-label="Control Flow: From Detection to Action">Control Flow: From Detection to Action</a></li>
+                <li>
+                    <a href="#communication-channels-the-lifelines" aria-label="Communication Channels: The Lifelines">Communication Channels: The Lifelines</a></li>
+                <li>
+                    <a href="#fail-safe-automation-the-last-line-of-defense" aria-label="Fail-Safe Automation: The Last Line of Defense">Fail-Safe Automation: The Last Line of Defense</a></li>
+                <li>
+                    <a href="#system-diagram-ascii-illustration" aria-label="System Diagram (ASCII Illustration)">System Diagram (ASCII Illustration)</a></li>
+                <li>
+                    <a href="#programming-the-decision-logic-high-level-design" aria-label="Programming the Decision Logic: High-Level Design">Programming the Decision Logic: High-Level Design</a></li>
+                <li>
+                    <a href="#modern-technologies-improving-safety-and-reliability" aria-label="Modern Technologies Improving Safety and Reliability">Modern Technologies Improving Safety and Reliability</a></li></ul>
+                </li>
+                <li>
+                    <a href="#simulating-dead-hand--bringing-history-to-life-with-rust--raspberry-pi" aria-label="Simulating Dead Hand — Bringing History to Life with Rust &amp; Raspberry Pi">Simulating Dead Hand — Bringing History to Life with Rust &amp; Raspberry Pi</a><ul>
+                        
+                <li>
+                    <a href="#introduction-why-simulate" aria-label="Introduction: Why Simulate?">Introduction: Why Simulate?</a></li>
+                <li>
+                    <a href="#system-components-and-architecture" aria-label="System Components and Architecture">System Components and Architecture</a></li>
+                <li>
+                    <a href="#sensor-integration" aria-label="Sensor Integration">Sensor Integration</a><ul>
+                        
+                <li>
+                    <a href="#motion-sensor-pir" aria-label="Motion Sensor (PIR)">Motion Sensor (PIR)</a></li>
+                <li>
+                    <a href="#radiation-sensor" aria-label="Radiation Sensor">Radiation Sensor</a></li>
+                <li>
+                    <a href="#seismic-sensor-accelerometer" aria-label="Seismic Sensor (Accelerometer)">Seismic Sensor (Accelerometer)</a></li>
+                <li>
+                    <a href="#data-fusion--decision-logic-in-rust" aria-label="Data Fusion &amp; Decision Logic in Rust">Data Fusion &amp; Decision Logic in Rust</a></li>
+                <li>
+                    <a href="#communication-simulation" aria-label="Communication simulation">Communication simulation</a></li>
+                <li>
+                    <a href="#human-interface-and-override-mechanism" aria-label="Human Interface and Override Mechanism">Human Interface and Override Mechanism</a></li>
+                <li>
+                    <a href="#physical-protection-the-faraday-cage" aria-label="Physical Protection: The Faraday Cage">Physical Protection: The Faraday Cage</a></li>
+                <li>
+                    <a href="#putting-it-all-together-system-workflow" aria-label="Putting It All Together: System Workflow">Putting It All Together: System Workflow</a></li>
+                <li>
+                    <a href="#potential-extensions-and-challenges" aria-label="Potential Extensions and Challenges">Potential Extensions and Challenges</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#historical-context--speculation-around-the-buzzer-number-station-and-its-connection-to-fail-deadly-systems" aria-label="Historical Context &amp; Speculation Around the Buzzer Number Station and Its Connection to Fail-Deadly Systems">Historical Context &amp; Speculation Around the Buzzer Number Station and Its Connection to Fail-Deadly Systems</a><ul>
+                        
+                <li>
+                    <a href="#the-enigma-of-number-stations" aria-label="The Enigma of Number Stations">The Enigma of Number Stations</a></li>
+                <li>
+                    <a href="#the-buzzer-station-uvb-76-facts--features" aria-label="The Buzzer Station (UVB-76): Facts &amp; Features">The Buzzer Station (UVB-76): Facts &amp; Features</a></li>
+                <li>
+                    <a href="#theories-behind-the-buzzer" aria-label="Theories Behind the Buzzer">Theories Behind the Buzzer</a></li>
+                <li>
+                    <a href="#the-buzzer-as-part-of-a-dead-hand-system-speculative-links" aria-label="The Buzzer as Part of a Dead Hand System: Speculative Links">The Buzzer as Part of a Dead Hand System: Speculative Links</a></li>
+                <li>
+                    <a href="#fail-deadly-systems-and-their-communication-needs" aria-label="Fail-Deadly Systems and Their Communication Needs">Fail-Deadly Systems and Their Communication Needs</a></li>
+                <li>
+                    <a href="#historical-insights-perimeter-and-early-soviet-systems" aria-label="Historical Insights: Perimeter and Early Soviet Systems">Historical Insights: Perimeter and Early Soviet Systems</a></li>
+                <li>
+                    <a href="#modern-interpretations-and-technological-evolution" aria-label="Modern Interpretations and Technological Evolution">Modern Interpretations and Technological Evolution</a></li>
+                <li>
+                    <a href="#modern-technology--ai-building-the-next-generation-of-fail-deadly-systems" aria-label="Modern Technology &amp; AI: Building the Next Generation of Fail-Deadly Systems">Modern Technology &amp; AI: Building the Next Generation of Fail-Deadly Systems</a><ul>
+                        
+                <li>
+                    <a href="#sensor-networks-on-steroids-multi-modal-distributed-and-redundant" aria-label="Sensor Networks on Steroids: Multi-Modal, Distributed, and Redundant">Sensor Networks on Steroids: Multi-Modal, Distributed, and Redundant</a></li>
+                <li>
+                    <a href="#artificial-intelligence-smarter-threat-assessment-and-decision-making" aria-label="Artificial Intelligence: Smarter Threat Assessment and Decision Making">Artificial Intelligence: Smarter Threat Assessment and Decision Making</a></li>
+                <li>
+                    <a href="#secure-and-resilient-communication" aria-label="Secure and Resilient Communication">Secure and Resilient Communication</a></li>
+                <li>
+                    <a href="#robust-physical--cybersecurity-measures" aria-label="Robust Physical &amp; Cybersecurity Measures">Robust Physical &amp; Cybersecurity Measures</a></li>
+                <li>
+                    <a href="#human-machine-teaming" aria-label="Human-Machine Teaming">Human-Machine Teaming</a></li></ul>
+                </li>
+                <li>
+                    <a href="#conceptual-architecture-of-a-modern-fail-deadly-system" aria-label="Conceptual Architecture of a Modern Fail-Deadly System">Conceptual Architecture of a Modern Fail-Deadly System</a></li>
+                <li>
+                    <a href="#potential-benefits-and-ethical-considerations" aria-label="Potential Benefits and Ethical Considerations">Potential Benefits and Ethical Considerations</a></li></ul>
+                </li>
+                <li>
+                    <a href="#fail-deadly-system-sensors--environmental-monitoring-in-historical-vs-modern-contexts" aria-label="Fail-Deadly System Sensors &amp; Environmental Monitoring in Historical vs. Modern Contexts">Fail-Deadly System Sensors &amp; Environmental Monitoring in Historical vs. Modern Contexts</a><ul>
+                        
+                <li>
+                    <a href="#historical-sensor-technologies-foundations-of-cold-war-detection" aria-label="Historical Sensor Technologies: Foundations of Cold War Detection">Historical Sensor Technologies: Foundations of Cold War Detection</a><ul>
+                        
+                <li>
+                    <a href="#seismic-sensors" aria-label="Seismic sensors">Seismic sensors</a></li>
+                <li>
+                    <a href="#radiation-detectors" aria-label="Radiation detectors">Radiation detectors</a></li>
+                <li>
+                    <a href="#atmospheric--pressure-sensors" aria-label="Atmospheric &amp; Pressure Sensors">Atmospheric &amp; Pressure Sensors</a></li>
+                <li>
+                    <a href="#electromagnetic-pulse-emp-sensors" aria-label="Electromagnetic Pulse (EMP) Sensors">Electromagnetic Pulse (EMP) Sensors</a></li>
+                <li>
+                    <a href="#communication-status-monitors" aria-label="Communication Status Monitors">Communication Status Monitors</a></li></ul>
+                </li>
+                <li>
+                    <a href="#modern-sensor-technologies-enhanced-detection--integration" aria-label="Modern Sensor Technologies: Enhanced Detection &amp; Integration">Modern Sensor Technologies: Enhanced Detection &amp; Integration</a><ul>
+                        
+                <li>
+                    <a href="#distributed-sensor-networks-iot-based" aria-label="Distributed Sensor Networks (IoT-Based)">Distributed Sensor Networks (IoT-Based)</a></li>
+                <li>
+                    <a href="#satellite-based-detection" aria-label="Satellite-Based Detection">Satellite-Based Detection</a></li>
+                <li>
+                    <a href="#ai-driven-sensor-fusion" aria-label="AI-Driven Sensor Fusion">AI-Driven Sensor Fusion</a></li>
+                <li>
+                    <a href="#quantum-sensors-emerging" aria-label="Quantum Sensors (Emerging)">Quantum Sensors (Emerging)</a></li></ul>
+                </li>
+                <li>
+                    <a href="#the-faraday-cage-and-hardened-bunkers-protecting-the-nerve-centers" aria-label="The Faraday Cage and Hardened Bunkers: Protecting the Nerve Centers">The Faraday Cage and Hardened Bunkers: Protecting the Nerve Centers</a><ul>
+                        
+                <li>
+                    <a href="#purpose-of-faraday-cages" aria-label="Purpose of Faraday Cages">Purpose of Faraday Cages</a></li>
+                <li>
+                    <a href="#historical-designs" aria-label="Historical designs">Historical designs</a></li>
+                <li>
+                    <a href="#modern-enhancements" aria-label="Modern enhancements">Modern enhancements</a></li></ul>
+                </li>
+                <li>
+                    <a href="#sensors-in-a-modern-raspberry-pi--rust-fail-deadly-simulator" aria-label="Sensors in a Modern Raspberry Pi &#43; Rust Fail-Deadly Simulator">Sensors in a Modern Raspberry Pi + Rust Fail-Deadly Simulator</a><ul>
+                        
+                <li>
+                    <a href="#off-the-shelf-sensors" aria-label="Off-the-shelf sensors">Off-the-shelf sensors</a></li>
+                <li>
+                    <a href="#data-collection-and-processing" aria-label="Data Collection and Processing">Data Collection and Processing</a></li>
+                <li>
+                    <a href="#fail-deadly-logic-in-software" aria-label="Fail-Deadly Logic in Software">Fail-Deadly Logic in Software</a></li>
+                <li>
+                    <a href="#physical-simulation" aria-label="Physical Simulation">Physical Simulation</a></li></ul>
+                </li>
+                <li>
+                    <a href="#summary-and-outlook" aria-label="Summary and Outlook">Summary and Outlook</a></li></ul>
+                </li>
+                <li>
+                    <a href="#simulation-and-implementation-of-a-fail-deadly-system-using-rust--raspberry-pi" aria-label="Simulation and Implementation of a Fail-Deadly System Using Rust &amp; Raspberry Pi">Simulation and Implementation of a Fail-Deadly System Using Rust &amp; Raspberry Pi</a><ul>
+                        
+                <li>
+                    <a href="#introduction-bringing-theory-to-practice" aria-label="Introduction: Bringing Theory to Practice">Introduction: Bringing Theory to Practice</a></li>
+                <li>
+                    <a href="#why-rust-and-raspberry-pi" aria-label="Why Rust and Raspberry Pi?">Why Rust and Raspberry Pi?</a><ul>
+                        
+                <li>
+                    <a href="#the-rust-advantage" aria-label="The Rust Advantage">The Rust Advantage</a></li>
+                <li>
+                    <a href="#the-raspberry-pi-platform" aria-label="The Raspberry Pi Platform">The Raspberry Pi Platform</a></li>
+                <li>
+                    <a href="#system-architecture-overview-1" aria-label="System Architecture Overview">System Architecture Overview</a></li></ul>
+                </li>
+                <li>
+                    <a href="#sensor-integration-1" aria-label="Sensor Integration">Sensor Integration</a><ul>
+                        
+                <li>
+                    <a href="#example-sensors-and-interfaces" aria-label="Example Sensors and Interfaces">Example Sensors and Interfaces</a></li>
+                <li>
+                    <a href="#sample-rust-snippet-reading-a-bmp280-barometric-sensor" aria-label="Sample Rust Snippet: Reading a BMP280 Barometric Sensor">Sample Rust Snippet: Reading a BMP280 Barometric Sensor</a></li></ul>
+                </li>
+                <li>
+                    <a href="#fail-deadly-logic-implementation" aria-label="Fail-Deadly Logic Implementation">Fail-Deadly Logic Implementation</a><ul>
+                        
+                <li>
+                    <a href="#thresholding-and-event-detection" aria-label="Thresholding and Event Detection">Thresholding and Event Detection</a></li>
+                <li>
+                    <a href="#heartbeat-and-override-window" aria-label="Heartbeat and Override Window">Heartbeat and Override Window</a></li>
+                <li>
+                    <a href="#example-rust-pseudocode-for-event-trigger" aria-label="Example Rust Pseudocode for Event Trigger">Example Rust Pseudocode for Event Trigger</a></li></ul>
+                </li>
+                <li>
+                    <a href="#communication-and-user-interface" aria-label="Communication and User Interface">Communication and User Interface</a><ul>
+                        
+                <li>
+                    <a href="#mqtt-messaging" aria-label="MQTT Messaging">MQTT Messaging</a></li>
+                <li>
+                    <a href="#web-dashboard" aria-label="Web Dashboard">Web Dashboard</a></li>
+                <li>
+                    <a href="#audible-and-visual-indicators" aria-label="Audible and Visual Indicators">Audible and Visual Indicators</a></li></ul>
+                </li>
+                <li>
+                    <a href="#physical-enclosure-and-environmental-considerations" aria-label="Physical Enclosure and Environmental Considerations">Physical Enclosure and Environmental Considerations</a></li>
+                <li>
+                    <a href="#extending-the-simulator-ai-and-advanced-features" aria-label="Extending the Simulator: AI and Advanced Features">Extending the Simulator: AI and Advanced Features</a></li>
+                <li>
+                    <a href="#summary-and-next-steps" aria-label="Summary and Next Steps">Summary and Next Steps</a></li></ul>
+                </li>
+                <li>
+                    <a href="#ethical-considerations-cultural-impact-and-modern-interpretations-of-fail-deadly-systems" aria-label="Ethical Considerations, Cultural Impact, and Modern Interpretations of Fail-Deadly Systems">Ethical Considerations, Cultural Impact, and Modern Interpretations of Fail-Deadly Systems</a><ul>
+                        
+                <li>
+                    <a href="#introduction-the-heavy-weight-of-fail-deadly" aria-label="Introduction: The Heavy Weight of Fail-Deadly">Introduction: The Heavy Weight of Fail-Deadly</a></li>
+                <li>
+                    <a href="#ethical-questions-around-automation-of-nuclear-retaliation" aria-label="Ethical Questions Around Automation of Nuclear Retaliation">Ethical Questions Around Automation of Nuclear Retaliation</a></li>
+                <li>
+                    <a href="#cultural-and-psychological-impact-of-number-stations-and-buzzer-sounds" aria-label="Cultural and Psychological Impact of Number Stations and Buzzer Sounds">Cultural and Psychological Impact of Number Stations and Buzzer Sounds</a></li>
+                <li>
+                    <a href="#modern-interpretations-and-analogues" aria-label="Modern Interpretations and Analogues">Modern Interpretations and Analogues</a></li>
+                <li>
+                    <a href="#the-future-balancing-technology-security-and-humanity" aria-label="The Future: Balancing Technology, Security, and Humanity">The Future: Balancing Technology, Security, and Humanity</a></li></ul>
+                </li>
+                <li>
+                    <a href="#conclusion-and-future-explorations" aria-label="Conclusion and Future Explorations">Conclusion and Future Explorations</a><ul>
+                        
+                <li>
+                    <a href="#recap-of-key-insights" aria-label="Recap of Key Insights">Recap of Key Insights</a></li>
+                <li>
+                    <a href="#bridging-history-and-modern-technology" aria-label="Bridging History and Modern Technology">Bridging History and Modern Technology</a></li>
+                <li>
+                    <a href="#the-value-of-simulation-and-exploration" aria-label="The Value of Simulation and Exploration">The Value of Simulation and Exploration</a></li>
+                <li>
+                    <a href="#future-directions" aria-label="Future Directions">Future Directions</a></li>
+                <li>
+                    <a href="#final-thoughts" aria-label="Final Thoughts">Final Thoughts</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="whispered-codes-from-the-cold-war">Whispered Codes from the Cold War</h2>
 <p>The Cold War was a time of heightened tension, paranoia, and shadowy conflict between the world’s superpowers — primarily the United States and the Soviet Union. Beneath the public face of diplomacy and propaganda, a clandestine war was waged in silence: the battle for intelligence supremacy. In this covert theatre, spies were the foot soldiers, and the airwaves were their secret conduits.</p>
 <p>Among the many enigmatic artifacts of this era were <strong>number stations</strong> — mysterious radio broadcasts characterized by sequences of numbers, letters, or unending buzzing sounds. These stations puzzled and fascinated shortwave radio enthusiasts, cryptologists, and governments alike. To the uninitiated, they sounded like cryptic ghost voices echoing across the static-laden spectrum. But to intelligence operatives, they were lifelines, securely delivering coded instructions to agents embedded deep behind enemy lines.</p>
 <p>The intrigue deepens when we consider that some of these enigmatic broadcasts, especially buzzer-type stations, may have served a more chilling purpose beyond communication: as integral parts of automated nuclear retaliation systems, known as <strong>dead hand</strong> or <strong>fail-deadly</strong> mechanisms. These systems were designed to guarantee a retaliatory strike even if command structures were obliterated in a surprise nuclear attack — ensuring mutually assured destruction.</p>
@@ -898,138 +1433,234 @@
 </ul>
 <h3 id="final-thoughts">Final Thoughts</h3>
 <p>Fail-deadly systems remain chilling reminders of humanity’s precarious relationship with technology and warfare. Through knowledge, transparency, and careful design, we can learn from the past to build safer futures — both in defense and in the broader interplay of machines and human judgment.</p>
-]]></content:encoded>
-    </item>
+
+  </div>
+
+  <footer class="post-footer">
+<nav class="paginav">
+  <a class="next" href="/articles/keeping-lxc-containers-and-docker-containers-up-to-date/">
+    <span class="title">Next Page&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right" style="user-select: text;"><line x1="5" y1="12" x2="19" y2="12" style="user-select: text;"></line><polyline points="12 5 19 12 12 19" style="user-select: text;"></polyline></svg>
+    </span>
+    <br>
+    <span>Keeping LXC containers with docker containers up-to-date</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
     
-    <item>
-      <title>Keeping LXC containers with docker containers up-to-date</title>
-      <link>/articles/keeping-lxc-containers-and-docker-containers-up-to-date/</link>
-      <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
+<footer class="footer">
+  <span>&copy; 2025 <a href="/">claesto</a></span><span style="display: inline-block; margin-left: 1em;">
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
+  </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+    <path d="M12 6H0l6-6z" />
+  </svg>
+</a>
+
+<script>
+  (function() {
+     
+    const disableThemeToggle = '' == '1';
+    if (disableThemeToggle) {
+      return;
+    }
+
+    let button = document.getElementById("theme-toggle")
+    
+    button.removeEventListener('click', toggleThemeListener)
+    
+    button.addEventListener('click', toggleThemeListener)
+  })();
+</script>
+
+<script>
+  (function () {
+    let menu = document.getElementById('menu')
+    if (menu) {
+      menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+      menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+      }
+    }
+
+    const disableSmoothScroll = '' == '1';
+    const enableInstantClick = '' == '1';
+    
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || disableSmoothScroll || enableInstantClick) {
+      return;
+    }
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        var id = this.getAttribute("href").substr(1);
+        document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+          behavior: "smooth"
+        });
+        if (id === "top") {
+          history.replaceState(null, null, " ");
+        } else {
+          history.pushState(null, null, `#${id}`);
+        }
+      });
+    });
+  })();
+</script>
+<script>
+  var mybutton = document.getElementById("top-link");
+  window.onscroll = function () {
+    if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+      mybutton.style.visibility = "visible";
+      mybutton.style.opacity = "1";
+    } else {
+      mybutton.style.visibility = "hidden";
+      mybutton.style.opacity = "0";
+    }
+  };
+</script>
+<script>
+  if (window.scrollListeners) {
+    
+    for (const listener of scrollListeners) {
+      window.removeEventListener('scroll', listener)
+    }
+  }
+  window.scrollListeners = []
+</script>
+
+
+
+<script src="/js/medium-zoom.min.js" data-no-instant
+></script>
+<script>
+  document.querySelectorAll('pre > code').forEach((codeblock) => {
+    const container = codeblock.parentNode.parentNode;
+
+    const copybutton = document.createElement('button');
+    copybutton.classList.add('copy-code');
+    copybutton.innerText = 'copy';
+
+    function copyingDone() {
+      copybutton.innerText = 'copied!';
+      setTimeout(() => {
+        copybutton.innerText = 'copy';
+      }, 2000);
+    }
+
+    copybutton.addEventListener('click', (cb) => {
+      if ('clipboard' in navigator) {
+        navigator.clipboard.writeText(codeblock.textContent);
+        copyingDone();
+        return;
+      }
+
+      const range = document.createRange();
+      range.selectNodeContents(codeblock);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      try {
+        document.execCommand('copy');
+        copyingDone();
+      } catch (e) { };
+      selection.removeRange(range);
+    });
+
+    if (container.classList.contains("highlight")) {
+      container.appendChild(copybutton);
+    } else if (container.parentNode.firstChild == container) {
       
-      <guid>/articles/keeping-lxc-containers-and-docker-containers-up-to-date/</guid>
-      <description>How to automatically update Ubuntu LXC containers with unattended-upgrades and keep Docker containers up-to-date using Watchtower for better security</description>
-      <content:encoded><![CDATA[<p>When running Ubuntu inside an LXC container, it&rsquo;s important to keep the system up-to-date with security patches and updates. Additionally, if you are running Docker containers inside your LXC environment, those need regular updates as well. This guide covers automating updates using <code>unattended-upgrades</code> for the LXC container and <code>watchtower</code> for Docker containers.</p>
-<h2 id="1-keeping-ubuntu-updated-with-unattended-upgrades">1. Keeping Ubuntu Updated with Unattended-Upgrades</h2>
-<h3 id="installing-unattended-upgrades">Installing Unattended-Upgrades</h3>
-<p>First, ensure that <code>unattended-upgrades</code> is installed on your LXC container:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo apt update <span style="color:#f92672">&amp;&amp;</span> sudo apt upgrade -y
-</span></span><span style="display:flex;"><span>sudo apt install unattended-upgrades -y
-</span></span></code></pre></div><h2 id="configuring-unattended-upgrades">Configuring Unattended-Upgrades</h2>
-<p>Edit the configuration file at <code>/etc/apt/apt.conf.d/50unattended-upgrades</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo vi /etc/apt/apt.conf.d/50unattended-upgrades
-</span></span></code></pre></div><p>Ensure the following settings are enabled:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Unattended-Upgrade::Allowed-Origins <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>distro_id<span style="color:#e6db74">}</span><span style="color:#e6db74">:</span><span style="color:#e6db74">${</span>distro_codename<span style="color:#e6db74">}</span><span style="color:#e6db74">-security&#34;</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>distro_id<span style="color:#e6db74">}</span><span style="color:#e6db74">:</span><span style="color:#e6db74">${</span>distro_codename<span style="color:#e6db74">}</span><span style="color:#e6db74">-updates&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>;
-</span></span><span style="display:flex;"><span>Unattended-Upgrade::Automatic-Reboot <span style="color:#e6db74">&#34;true&#34;</span>;
-</span></span><span style="display:flex;"><span>Unattended-Upgrade::Automatic-Reboot-Time <span style="color:#e6db74">&#34;02:00&#34;</span>;
-</span></span></code></pre></div><p>This configuration ensures security and general updates are installed automatically and the system reboots if necessary at 2 AM.</p>
-<h3 id="enabling-unattended-upgrades">Enabling Unattended-Upgrades</h3>
-<p>Enable the service to run automatically:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo systemctl start unattended-upgrades
-</span></span><span style="display:flex;"><span>sudo systemctl enable unattended-upgrades
-</span></span></code></pre></div><p>This command enables automatic updates.</p>
-<h3 id="running-unattended-upgrades-on-a-schedule">Running Unattended-Upgrades on a Schedule</h3>
-<p>To run updates at specific intervals, add a cron job:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo crontab -e
-</span></span></code></pre></div><p>Add the following line at the end of the file to run updates every day at midnight:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> * * * /usr/bin/unattended-upgrade -d
-</span></span></code></pre></div><h2 id="2-keeping-docker-containers-updated-with-watchtower">2. Keeping Docker Containers Updated with Watchtower</h2>
-<p>Watchtower is a Docker container that automatically updates running containers when new images become available.</p>
-<p>If you are using Docker Compose, add the following to your <code>docker-compose.yml</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">watchtower</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">containrrr/watchtower</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">watchtower</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/var/run/docker.sock:/var/run/docker.sock</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">command</span>: --<span style="color:#ae81ff">schedule &#34;0 0 * * *&#34;</span>
-</span></span></code></pre></div><p>This configuration:</p>
-<ul>
-<li>Uses the official <code>containrrr/watchtower</code> image</li>
-<li>Mounts the Docker socket to manage containers</li>
-<li>Runs Watchtower daily at midnight to check for updates</li>
-</ul>
-<h3 id="running-watchtower">Running Watchtower</h3>
-<p>Deploy Watchtower with:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker compose up -d
-</span></span></code></pre></div><h2 id="conclusion">Conclusion</h2>
-<p>By setting up <code>unattended-upgrades</code> and <code>watchtower</code>, your LXC containers and Docker workloads will always stay updated, reducing security risks and ensuring you’re running the latest versions of your software automatically.</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Python kanban card generator</title>
-      <link>/articles/python-kanban-card-generator/</link>
-      <pubDate>Tue, 28 Jan 2025 00:00:00 +0000</pubDate>
+    } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
       
-      <guid>/articles/python-kanban-card-generator/</guid>
-      <description>Streamline your pantry management with the Kanban Card Generator, a Python-based tool for creating customizable QR-enabled Kanban cards.</description>
-      <content:encoded><![CDATA[<p>Managing pantry inventory can be a daunting task, often leading to overstocking or running out of essential items. To address this challenge, I developed the <a href="https://github.com/claesto/kanban-card-generator">Kanban Card Generator</a>, a Python-powered tool designed to streamline pantry management by generating QR-enhanced Kanban cards.</p>
-<h2 id="project-overview">Project overview</h2>
-<p>Inspired by the Kanban system—a scheduling method widely used in just-in-time (JIT) manufacturing—I adapted its principles for personal pantry management. The core idea is to create visual cues that signal when it&rsquo;s time to replenish specific items, thereby maintaining optimal stock levels.</p>
-<p>The Kanban Card Generator produces business card-sized labels containing essential product information:</p>
-<ul>
-<li><strong>Product Type</strong>: The category or name of the item</li>
-<li><strong>Manufacturer</strong>: The brand or producer of the item</li>
-<li><strong>Store of Purchase</strong>: Where the item is typically bought</li>
-<li><strong>Kanban Levels</strong>: Indicators that help determine when to reorder</li>
-<li><strong>Reorder Quantity</strong>: The amount to purchase when restocking</li>
-</ul>
-<p>A prominent feature of each card is a QR code, generated using the <a href="https://pypi.org/project/segno/">Segno library</a>. This QR code integrates seamlessly with a custom macOS and iOS Shortcut, allowing for quick addition of items to a designated list, such as a grocery list.</p>
-<h2 id="key-features">Key features</h2>
-<ul>
-<li><strong>Python-Powered</strong>: Utilizes Python for efficient data processing and card generation.</li>
-<li><strong>QR Code Integration</strong>: Generates QR codes for swift item logging via mobile devices.</li>
-<li><strong>Customizable Templates</strong>: Allows for personalization of card design to suit individual preferences.</li>
-<li><strong>Cross-Platform Compatibility</strong>: Works seamlessly with macOS and iOS Shortcuts for enhanced usability.</li>
-</ul>
-<h2 id="getting-started">Getting started</h2>
-<p>To setup the Kanban Card Generator:</p>
-<ol start="0">
-<li>
-<p>Prerequisite: you have the macOS/iOS Shortcut &ldquo;<a href="https://www.icloud.com/shortcuts/609528f7b75b441bb34834c92f07b175">AddToList</a>&rdquo; installed.</p>
-</li>
-<li>
-<p><strong>Clone the Repository</strong>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git clone https://github.com/claesto/kanban-card-generator.git
-</span></span><span style="display:flex;"><span>$ cd kanban-card-generator
-</span></span></code></pre></div></li>
-<li>
-<p>Activate the Python virtual environment:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ python -m venv venv
-</span></span><span style="display:flex;"><span>$ venv/bin/python venv/bin/activate
-</span></span></code></pre></div></li>
-<li>
-<p><strong>Install Dependencies</strong>: Ensure you have Python installed, then install the required libraries:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ venv/bin/python -m pip install -r requirements.txt
-</span></span></code></pre></div></li>
-<li>
-<p><strong>Configure Your Data</strong>: Customize the kanbancard.py script with your inventory details, including product names, manufacturers, stores, Kanban levels, and reorder quantities.</p>
-</li>
-<li>
-<p><strong>Generate Kanban Cards</strong>: Run the script to generate your personalized Kanban cards:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>venv/bin/python kanbancard.py
-</span></span></code></pre></div></li>
-<li>
-<p><strong>Print and Use</strong>: Print the generated cards and attach them to your pantry items. Use the QR codes with the macOS and iOS Shortcut to manage your inventory efficiently.</p>
-</li>
-</ol>
-<p>If all went as expected, if you scan the QR code for a specific item, this item should be added to your <a href="https://www.icloud.com/reminders/">Reminders</a> list of choice.</p>
-<h2 id="future-enhancements">Future enhancements</h2>
-<p>Right now I&rsquo;m not really looking for specific enhancements. I don&rsquo;t have to manage a large inventory, this is after all to make managing our pantry/storage a bit easier. However feel free to iterate on the code, it&rsquo;s available under the <strong>Unlicense</strong> license.</p>
-<p>Some ideas:</p>
-<ul>
-<li><strong>Database integration</strong>: Implementing a database to manage larger inventories</li>
-<li><strong>Enhanced customization/templates</strong>: Offering more design options for the generated kanban cards</li>
-<li><strong>Mobile application</strong>: specifically tailored to inventory/stock management</li>
-</ul>
-<p>Contributions and feedback are welcome! Feel free to fork the repository, submit <a href="https://github.com/claesto/kanban-card-generator/pulls">pull requests</a>, or <a href="https://github.com/claesto/kanban-card-generator/issues">open issues</a> on GitHub.</p>
-<p>By leveraging this tool, you can transform your pantry management into a streamlined, efficient process, ensuring you always have the essentials on hand without overstocking.</p>
-]]></content:encoded>
-    </item>
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+    } else {
+      
+      codeblock.parentNode.appendChild(copybutton);
+    }
+  });
+</script>
+
+
+
+
+<script>
+  
+  
+  (function() {
+    const enableTocScroll = '1' == '1'
+    if (!enableTocScroll) {
+      return
+    }
+    if (!document.querySelector('.toc')) {
+      console.log('no toc found, ignore toc scroll')
+      return
+    }
     
-  </channel>
-</rss>
+
+    
+    const scrollListeners = window.scrollListeners
+    const headings = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id]');
+    const activeClass = 'active';
+
+    
+    let activeHeading = headings[0];
+    getLinkByHeading(activeHeading).classList.add(activeClass);
+
+    const onScroll = () => {
+      const passedHeadings = [];
+      for (const h of headings) {
+        
+        if (getOffsetTop(h) < 5) {
+          passedHeadings.push(h)
+        } else {
+          break;
+        }
+      }
+      if (passedHeadings.length > 0) {
+        newActiveHeading = passedHeadings[passedHeadings.length - 1];
+      } else {
+        newActiveHeading = headings[0];
+      }
+      if (activeHeading != newActiveHeading) {
+        getLinkByHeading(activeHeading).classList.remove(activeClass);
+        activeHeading = newActiveHeading;
+        getLinkByHeading(activeHeading).classList.add(activeClass);
+      }
+    }
+
+    let timer = null;
+    const scrollListener = () => {
+      if (timer !== null) {
+        clearTimeout(timer)
+      }
+      timer = setTimeout(onScroll, 50)
+    }
+    window.addEventListener('scroll', scrollListener, false);
+    scrollListeners.push(scrollListener)
+
+    function getLinkByHeading(heading) {
+      const id = encodeURI(heading.getAttribute('id')).toLowerCase();
+      return document.querySelector(`.toc ul li a[href="#${id}"]`);
+    }
+
+    function getOffsetTop(heading) {
+      if (!heading.getClientRects().length) {
+        return 0;
+      }
+      let rect = heading.getBoundingClientRect();
+      return rect.top
+    }
+  })();
+  </script>
+<script>
+  mediumZoom('.entry-cover img');
+  mediumZoom('.post-content img:not([no-zoom])');
+</script>
+
+</body>
+
+</html>
